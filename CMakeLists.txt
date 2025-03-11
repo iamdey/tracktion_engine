@@ -2,6 +2,9 @@ include_guard()
 
 cmake_minimum_required (VERSION 3.15...3.20)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 file(READ VERSION.md CURRENT_VERSION)
 project(tracktion
         VERSION ${CURRENT_VERSION}
@@ -21,4 +24,4 @@ endif()
 add_subdirectory(modules)
 
 enable_testing()
-add_subdirectory(examples)
+add_subdirectory(examples/DemoRunner)
